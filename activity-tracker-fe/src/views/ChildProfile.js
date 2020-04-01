@@ -1,0 +1,52 @@
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import ChildBlock from '../components/ChildBlock'
+import editChildModal from '../modals/addChild'
+
+const ParentPortal = () => {
+  const [child, setChild] = useState([])
+
+  useEffect(() => {
+    axios.get("specific child")
+    .then(res => {
+      setChild(res.data)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }, [])
+
+  const editChild = () => {
+    // bring up child modal
+  }
+  const delChild = () => {
+    // bring up child modal
+  }
+  const activityLog = () => {
+    // bring up child modal
+  }
+  
+  const addPoints = () => {
+    // bring up child modal
+  }
+  
+  const subtractPoints = () => {
+    // bring up child modal
+  }
+  
+  return (
+    <div>
+      <h2>{child.name} Profile</h2>
+      <p>Available Points {child.points}</p>
+      <div>
+        <button onClick={addPoints}>Activity log</button>
+        <button onClick={subtractPoints}>Activity log</button>
+      </div>
+      <button onClick={activityLog}>Activity log</button>
+      <button onClick={editChild}>Edit Child</button>
+      <button onClick={delChild}>Delete Child Profile</button>
+    </div>
+  )
+}
+
+export default ParentPortal
