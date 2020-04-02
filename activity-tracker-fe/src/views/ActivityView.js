@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import RewardModal from '../modals/RewardModal'
-import Reward from '../components/Reward'
+import Activity from '../components/Activity'
 
-const RewardView = () => {
+const ActivityView = () => {
   const [child, setChild] = useState([])
   const [show, setShow] = useState(false)
 
@@ -24,14 +24,17 @@ const RewardView = () => {
   return(
     <div>
       <h2>{child.name}'s Profile</h2>
-      <h2>available points {child.rewards.reduce((acc, cur) => acc + cur)}</h2>
-      {child.rewards.forEach(reward => {
-        <Reward prize={reward} />
+      <h2>current points {child.activities.reduce((acc, cur) => acc + cur)}</h2>
+      {child.activities.forEach(activity => {
+        <Activity task={activity} />
       })}
-      <button onClick={addReward}>add new reward</button>
-      <RewardModal handleClose={addReward} show={show} />
+      <button>task description</button>
+      <button>value of task</button>
+
+      <button onClick={addReward}>add new log</button>
+      <RewardModal handleClose={addChild} show={show} />
     </div>
   )
 }
 
-export default RewardView
+export default ActivityView
