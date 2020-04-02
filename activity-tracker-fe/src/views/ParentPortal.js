@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ChildBlock from '../components/ChildBlock'
-import addChildModal from '../modals/addChild'
+import AddChildModal from '../modals/AddChild'
 
 const ParentPortal = () => {
   const [children, setChildren] = useState([])
+  const [show, setShow] = useState(false)
 
   useEffect(() => {
     axios.get("user's children")
@@ -17,7 +18,8 @@ const ParentPortal = () => {
   }, [])
 
   const addChild = () => {
-    // bring up child modal
+    // bring up/close child modal
+    setShow(!show)
   }
   
   return (
@@ -29,6 +31,7 @@ const ParentPortal = () => {
       })}
 
       <button onClick={addChild}>Add New Child</button>
+      <AddChildModal handleClose={addChild} show={show} />
     </div>
   )
 }
