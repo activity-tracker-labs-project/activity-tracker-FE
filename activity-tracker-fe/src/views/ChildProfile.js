@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import ChildBlock from '../components/ChildBlock'
 import EditChildModal from '../modals/EditChild'
 import DelChildModal from '../modals/DelChild'
 import EditPointsModal from '../modals/EditPoints'
 
 const ParentPortal = () => {
   const [child, setChild] = useState([])
+  const [showArr, setShowArr] = useState([false, false, false])
 
   useEffect(() => {
     axios.get("specific child")
@@ -18,19 +18,19 @@ const ParentPortal = () => {
     })
   }, [])
 
+  const editPoints = () => {
+    // bring up child modal
+  }
+  const activityLog = () => {
+    // route to it
+  }
   const editChild = () => {
     // bring up child modal
   }
   const delChild = () => {
     // bring up child modal
   }
-  const activityLog = () => {
-    // bring up child modal
-  }
   
-  const editPoints = () => {
-    // bring up child modal
-  }
   
   
   return (
@@ -42,6 +42,9 @@ const ParentPortal = () => {
       <button onClick={activityLog}>Activity log</button>
       <button onClick={editChild}>Edit Child</button>
       <button onClick={delChild}>Delete Child Profile</button>
+      <DelChildModal handleClose={delChild} show={show[2]} />
+      <EditChildModal handleClose={editChild} show={show[1]} />
+      <EditPointsModal handleClose={editPoints} show={show[0]} />
     </div>
   )
 }
