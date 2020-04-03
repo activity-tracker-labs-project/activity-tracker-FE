@@ -8,7 +8,7 @@ import AboutApp from './components/AboutApp';
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Route exact path="/" component={Welcome}></Route>
       <Route exact path="/aboutteam" component={AboutTeam}></Route>
       <Route exact path="/aboutapp" component={AboutApp}></Route>

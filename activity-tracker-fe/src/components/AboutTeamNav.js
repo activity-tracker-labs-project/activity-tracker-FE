@@ -7,8 +7,8 @@ function AboutTeamNav() {
         <NavLink exact path to="/">Home</NavLink>
         <NavLink exact path to="/aboutapp">About the App</NavLink>
         {/* <NavLink exact path to="/aboutteam">About the Team</NavLink> */}
-        <NavLink exact path to="/login">About the Team</NavLink>
-        <NavLink exact path to="/register">About the Team</NavLink>
+        <NavLink exact path to="/login">Login</NavLink>
+        <NavLink exact path to="/register">Sign Up</NavLink>
     </div>
     )
 }

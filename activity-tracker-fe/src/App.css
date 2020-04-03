@@ -1,26 +1,36 @@
 * {
   text-align: center;
   background-color: gray;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: darkgrey;
+}
+
+.app {
+  height: 100%;
+  background: gray;
+
 }
 
 .header {
   border: solid 2px lightgray;
-  height: 180px;
-  width: 55%;
+  max-height: 150px;
+  max-width: 550px;
   background-color: lightgray;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
 }
 
 .welcomebox {
-  width: 400px;
-  height: 150px;
+  width: 380px;
+  height: 80px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   background: lightgray;
+  align-items: center;
   }
 
 .splash {
@@ -28,36 +38,43 @@
   display: flex;
   margin-top: 30px;
   margin-left: -100px;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
 }
 
 .logo {
   background: transparent; 
+  height: 100%;
 }
 
 a {
   background: transparent;
-  color: teal;
-  background: gray;
   text-decoration: none;
   color: black;
+  margin-top: 20px;
 }
 
+.welcomecontainer {
+  background: grey;
+}
 .nav {
-  width: 400px;
+  width: 350px;
+  font-size: 15px;
   background: lightgray;
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
   background: gray;
-  margin-top: 30px;
+  margin-top: 50px;
+  margin-left: 430px;
+  margin-bottom: -20px;
 }
 
 .welcomeButtons {
   display: flex;
   flex-direction: column;
   padding: 100px;
+  background: transparent;
 }
 
 button {
