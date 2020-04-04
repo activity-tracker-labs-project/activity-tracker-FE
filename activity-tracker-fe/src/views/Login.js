@@ -3,7 +3,7 @@
 
 import React from 'react';
 import axiosWithAuth from "../utils/axiosWithAuth";
-import './Register.css';
+import '../styles/Register.css';
 const Login = (props) => {
     const [form, setForm] = React.useState({ username: "", password: "" }); 
     const handleChanges = e => {

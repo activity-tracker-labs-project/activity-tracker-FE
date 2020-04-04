@@ -2,9 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Route } from "react-router-dom";
-import Register from "./components/Register.js";
-import Home from "./components/Home";
-import Login from "./components/Login";
+import Register from "./views/Register.js";
+import Home from "./views/Home";
+import Login from "./views/Login";
 
 function App() {
   return (
