@@ -26,7 +26,7 @@ let ModalMain = styled.section`
 
 `
 
-const EventModal = ({ handleClose, show, handleInput }) => {
+const AddChildModal = ({ handleClose, show, handleInput }) => {
   // Display only if show is true
   const showHide = show ? {display: 'block'} : {display: 'none'};
   
@@ -45,4 +45,4 @@ const EventModal = ({ handleClose, show, handleInput }) => {
   );
 };
 
-export default EventModal;
+export default AddChildModal;

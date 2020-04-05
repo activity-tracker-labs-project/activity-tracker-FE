@@ -26,7 +26,7 @@ let ModalMain = styled.section`
 
 `
 
-const WarningModal = ({ handleClose, show, warning }) => {
+const CWarningModal = ({ handleClose, show, warning, axiosDelete }) => {
   // Display only if show is true
   const showHide = show ? {display: 'block'} : {display: 'none'};
   
@@ -35,10 +35,11 @@ const WarningModal = ({ handleClose, show, warning }) => {
     <Container style = {showHide}>
       <ModalMain>
         <h2>{warning} </h2>
-        <button onClick={handleClose}>close</button>
+        <button onClick={axiosDelete}>Yes</button>
+        <button onClick={handleClose}>Cancel</button>
       </ModalMain>
     </Container>
   );
 };
 
-export default WarningModal;
+export default CWarningModal;
