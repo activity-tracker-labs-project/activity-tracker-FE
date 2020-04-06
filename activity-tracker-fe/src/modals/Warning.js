@@ -1,6 +1,6 @@
 // Import Dependencies
 import React from 'react'
-import '../styles/WarningStyle.css'
+import '../styles/ModalStyle.css'
 
 const WarningModal = ({ handleClose, show, warning }) => {
   // Display only if show is true
@@ -8,12 +8,12 @@ const WarningModal = ({ handleClose, show, warning }) => {
   
   
   return (
-    <Container style = {showHide}>
-      <ModalMain>
+    <div className='modalContainer' style = {showHide}>
+      <div className='modalWarning'>
         <h2>{warning} </h2>
         <button onClick={handleClose}>close</button>
-      </ModalMain>
-    </Container>
+      </div>
+    </div>
   );
 };
 

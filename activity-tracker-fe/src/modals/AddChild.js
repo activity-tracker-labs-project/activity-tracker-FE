@@ -8,7 +8,7 @@ const AddChildModal = ({ handleClose, show, handleInput }) => {
   
   
   return (
-    <div className='container' style = {showHide}>
+    <div className='modalContainer' style = {showHide}>
       <div className='modalMain'>
         <input type='text' placeholder="Child's Name" />
         <input type='text' placeholder="Child's Age" />

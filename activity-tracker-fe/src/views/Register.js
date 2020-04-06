@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import * as yup from "yup";
 import '../styles/Register.css';
-import axiosWithAuth from "../utils/axiosWithAuth";
 
 
 const formSchema = yup.object().shape({

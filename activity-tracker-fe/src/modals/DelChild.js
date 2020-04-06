@@ -8,15 +8,15 @@ const DelChildModal = ({ handleClose, show, handleClick }) => {
   
   
   return (
-    <Container style = {showHide}>
-      <ModalMain>
+    <div className='modalContainer' style = {showHide}>
+      <div className='modalMain'>
         <p> Are you sure you want to delete this child profile?</p>
         <div>
           <button onClick={handleClick}>delChild</button>
           <button onClick={handleClose}>close</button>
         </div>
-      </ModalMain>
-    </Container>
+      </div>
+    </div>
   );
 };
 

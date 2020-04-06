@@ -8,16 +8,16 @@ const EditPointsModal = ({ handleClose, show, handleInput }) => {
   
   
   return (
-    <Container style = {showHide}>
-      <ModalMain>
+    <div className='modalContainer' style = {showHide}>
+      <div className='modalMain'>
         <input type='text' placeholder="Activity/Reward Name" />
         <input type='number' placeholder="0" />
         <div>
           <button onClick={handleInput}>Add</button>
           <button onClick={handleClose}>close</button>
         </div>
-      </ModalMain>
-    </Container>
+      </div>
+    </div>
   );
 };
 
