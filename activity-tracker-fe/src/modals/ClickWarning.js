@@ -2,7 +2,7 @@
 import React from 'react'
 import '../styles/ModalStyle.css'
 
-const WarningModal = ({ handleClose, show, warning }) => {
+const CWarningModal = ({ handleClose, show, warning, axiosDelete }) => {
   // Display only if show is true
   const showHide = show ? {display: 'block'} : {display: 'none'};
   
@@ -11,10 +11,11 @@ const WarningModal = ({ handleClose, show, warning }) => {
     <div className='modalContainer' style = {showHide}>
       <div className='modalWarning'>
         <h2>{warning} </h2>
-        <button onClick={handleClose}>close</button>
+        <button onClick={axiosDelete}>Yes</button>
+        <button onClick={handleClose}>Cancel</button>
       </div>
     </div>
   );
 };
 
-export default WarningModal;
+export default CWarningModal;

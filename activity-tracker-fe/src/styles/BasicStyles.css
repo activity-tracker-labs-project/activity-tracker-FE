@@ -1,0 +1,9 @@
+.block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content {
+  margin: 0 20px;
+}

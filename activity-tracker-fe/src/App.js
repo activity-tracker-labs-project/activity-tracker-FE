@@ -2,17 +2,15 @@ import React from 'react';
 import { Route } from "react-router-dom";
 import Welcome from "./views/Welcome";
 import Register from "./views/Register.js";
-import Home from "./views/Home";
 import Login from "./views/Login";
-import AboutTeam from './components/AboutTeam';
-import AboutApp from './components/AboutApp';
+import AboutTeam from './views/AboutTeam';
+import AboutApp from './views/AboutApp';
 
-import './App.css';
+import './styles/App.css';
 
 function App() {
   return (
     <div className="App">
-      <Route exact path="/" component={Home}/>
       <Route path="/register" component={Register}/>
       <Route path="/login" component={Login}/>
       <Route exact path="/" component={Welcome}/>
